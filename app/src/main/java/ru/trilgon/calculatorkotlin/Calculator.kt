@@ -1,6 +1,7 @@
 package ru.trilgon.calculatorkotlin
 
 import java.math.BigDecimal
+import java.math.RoundingMode
 import java.util.*
 
 
@@ -23,8 +24,13 @@ class Calculator() : MainContract.Model {
                         inValues.subList(index, index + 2).clear()
                         index -= 2
                     } catch (e: ArithmeticException) {
-                        inValues.clear()
-                        return "Can't divide by zero"
+                        if(inValues[index+1] == "0"){
+                            inValues.clear()
+                            return "Can't divide by zero"
+                        } else{
+                            result = inValues[index - 1].toBigDecimal()
+                                .divide(inValues[index + 1].toBigDecimal(), 6, RoundingMode.HALF_UP)
+                        }
                     }
                 }
                 inValues[index] == "*" -> {
