@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <TextView
+        android:id="@+id/textIn"
+        style="@style/TextView"
+        android:textSize="44sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop" />
+
+    <TextView
+        android:id="@+id/textOut"
+        style="@style/TextView"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textIn" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textOut">
+
+        <Button
+            android:id="@+id/btnMod"
+            style="@style/ButtonCalc.TopActions"
+            android:text="@string/percent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnSign"
+            style="@style/ButtonCalc.TopActions"
+            android:text="@string/change_sign"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/ButtonCalc.TopActions"
+            android:text="@string/all_clear"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/ButtonCalc.RightActions"
+            android:text="@string/divide"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        app:layout_constraintTop_toBottomOf="@id/line1">
+
+        <Button
+            android:id="@+id/btnSeven"
+            style="@style/ButtonCalc.Numbers"
+            android:layout_weight="1"
+            android:text="@string/seven" />
+
+        <Button
+            android:id="@+id/btnEight"
+            style="@style/ButtonCalc.Numbers"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="@string/eight" />
+
+        <Button
+            android:id="@+id/btnNine"
+            style="@style/ButtonCalc.Numbers"
+            android:layout_weight="1"
+            android:text="@string/nine" />
+
+
+        <Button
+            android:id="@+id/btnMultiply"
+            style="@style/ButtonCalc.RightActions"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:text="@string/multiple" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        app:layout_constraintTop_toBottomOf="@id/line2">
+
+        <Button
+            android:id="@+id/btnFour"
+            style="@style/ButtonCalc.Numbers"
+            android:layout_weight="1"
+            android:text="@string/four" />
+
+        <Button
+            android:id="@+id/btnFive"
+            android:layout_weight="1"
+            style="@style/ButtonCalc.Numbers"
+            android:text="@string/five" />
+
+        <Button
+            android:id="@+id/btnSix"
+            android:layout_weight="1"
+            style="@style/ButtonCalc.Numbers"
+            android:text="@string/six" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            android:layout_weight="1"
+            style="@style/ButtonCalc.RightActions"
+            android:text="@string/minus" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line5"
+        app:layout_constraintTop_toBottomOf="@id/line3">
+
+        <Button
+            android:id="@+id/btnOne"
+            style="@style/ButtonCalc.Numbers"
+            android:layout_weight="1"
+            android:text="@string/one" />
+
+        <Button
+            android:id="@+id/btnTwo"
+            android:layout_weight="1"
+            style="@style/ButtonCalc.Numbers"
+            android:text="@string/two" />
+
+        <Button
+            android:id="@+id/btnThree"
+            android:layout_weight="1"
+            style="@style/ButtonCalc.Numbers"
+            android:text="@string/three" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_weight="1"
+            style="@style/ButtonCalc.RightActions"
+            android:text="@string/plus" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line4">
+
+        <Button
+            android:id="@+id/btnZero"
+            style="@style/ButtonCalc.Numbers"
+            android:layout_weight="2.02"
+            android:text="@string/zero" />
+
+        <Button
+            android:id="@+id/btnPoint"
+            style="@style/ButtonCalc.Numbers"
+            android:layout_weight="1"
+            android:text="@string/dot" />
+
+        <Button
+            android:id="@+id/btnEquals"
+            style="@style/ButtonCalc.RightActions"
+            android:layout_weight="1"
+            android:text="@string/equals" />
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
